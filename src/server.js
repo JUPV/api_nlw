@@ -1,34 +1,38 @@
-require("express-async-errors");
+//require("express-async-errors");
 
 const path = require("path");
 
-const swaggerDocument = require("./docs/swagger.json");
-const swaggerUI = require("swagger-ui-express");
-const uploadConfig = require("./configs/upload");
-const AppError = require("./utils/AppError");
+//const swaggerDocument = require("./docs/swagger.json");
+//const swaggerUI = require("swagger-ui-express");
+//const uploadConfig = require("./configs/upload");
+////const AppError = require("./utils/AppError");
 const express = require("express");
-const cors = require("cors");
+//const cors = require("cors");
 
 const app = express();
 
-app.use("/avatar", express.static(uploadConfig.UPLOADS_FOLDER));
+//app.use("/avatar", express.static(uploadConfig.UPLOADS_FOLDER));
 
-const demoExercisePath = path.resolve(__dirname, "..", "exercises", "gif")
-app.use("/exercise/demo", express.static(demoExercisePath));
+//const demoExercisePath = path.resolve(__dirname, "..", "exercises", "gif")
+//app.use("/exercise/demo", express.static(demoExercisePath));
 
-const thumbExercisesPath = path.resolve(__dirname, "..", "exercises", "thumb")
-app.use("/exercise/thumb", express.static(thumbExercisesPath));
+//const thumbExercisesPath = path.resolve(__dirname, "..", "exercises", "thumb")
+//app.use("/exercise/thumb", express.static(thumbExercisesPath));
 
 
 const routes = require("./routes");
 
 app.use(express.json());
-app.use(cors());
+//app.use(cors());
 
-app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
+//app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
 
 app.use(routes);
+app.get('/', function (req, res) {
+  res.send('hello world')
+})
 
+/*
 app.use((err, request, response, next) => {
   if (err instanceof AppError) {
     return response.status(err.statusCode).json({
@@ -44,6 +48,6 @@ app.use((err, request, response, next) => {
     message: "Internal server error",
   });
 });
-
+*/
 const PORT = 3000;
 app.listen(PORT, () => console.log(`Server is running on Port ${PORT}`));
