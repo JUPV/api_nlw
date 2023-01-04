@@ -1,11 +1,11 @@
 const path = require("path");
 
-
+/*
   module.exports = {
     development: {
       client: 'mysql2',
       connection: {
-        host : 'http://env-5987957.jelastic.saveincloud.net',
+        host : 'localhost',
         user : 'root',
         password: 'GZVSwvDyDC',
         database : 'Gutemberg'
@@ -21,9 +21,9 @@ const path = require("path");
     }
   };
 
+*/
 
 
-/*
 module.exports = {
   development: {
     client: "sqlite3",
@@ -39,4 +39,3 @@ module.exports = {
     useNullAsDefault: true
   }
 };
-*/
