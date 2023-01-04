@@ -1,14 +1,14 @@
 const path = require("path");
 
-/*
+
   module.exports = {
     development: {
       client: 'mysql2',
       connection: {
-        host : 'localhost',
+        host : 'env-5987957.jelastic.saveincloud.net',
         user : 'root',
         password: 'GZVSwvDyDC',
-        database : 'Gutemberg'
+        database : 'gutemberg'
       },
       migrations: {
         directory: path.resolve(__dirname, "src", "database", "migrations")
@@ -21,8 +21,8 @@ const path = require("path");
     }
   };
 
-*/
 
+/*
 
 module.exports = {
   development: {
@@ -39,3 +39,12 @@ module.exports = {
     useNullAsDefault: true
   }
 };
+
+
+
+
+host : '192.168.0.195',
+        user : 'root',
+        password: 'GZVSwvDyDC',
+        database : 'gutemberg'
+*/
