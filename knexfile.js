@@ -5,9 +5,8 @@ const path = require("path");
     development: {
       client: 'mysql2',
       connection: {
-        host : 'https://node123862-env-5987957.jelastic.saveincloud.net',
+        host : 'http://env-5987957.jelastic.saveincloud.net',
         user : 'root',
-        port: 3022,
         password: 'GZVSwvDyDC',
         database : 'Gutemberg'
       },

@@ -3,8 +3,9 @@ const AppError = require("../utils/AppError");
 const authConfig = require("../configs/auth");
 
 async function ensureAuthenticated(request, response, next) {
+  console.log("teste 22223")
   const authHeader = request.headers.authorization;
-  //console.log("teste")
+  console.log("teste 2222")
   if (!authHeader) {
     throw new AppError("JWT token não informado", 401);
   }

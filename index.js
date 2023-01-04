@@ -27,7 +27,7 @@ app.use(cors());
 
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
 
-
+app.use(routes);
 app.use((err, request, response, next) => {
   if (err instanceof AppError) {
     return response.status(err.statusCode).json({
@@ -44,5 +44,5 @@ app.use((err, request, response, next) => {
   });
 });
 
-const PORT = 3000;
-app.listen(PORT, () => console.log(`Server is running on Port ${PORT}`));
+const PORT = 3333;
+app.listen(PORT, () => console.log(`servidor roddddddando rs ${PORT}`));

@@ -7,9 +7,9 @@ const GenerateToken = require("../providers/GenerateToken");
 class SessionsController {
   async create(request, response) {
     const { email, password } = request.body;
-
+    console.log("aqui")
     const user = await knex("users").where({ email: email.toLowerCase() }).first();
-
+    console.log("passsouuuuuuuu")
     if (!user) {
       throw new AppError("E-mail e/ou senha incorreta.", 404);
     }
